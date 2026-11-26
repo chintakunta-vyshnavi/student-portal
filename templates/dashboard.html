@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | StudentPortal{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <div class="container">
+
+        <div class="dashboard-heading">
+            <div>
+                <span class="section-label">STUDENT PORTAL</span>
+                <h1>My Dashboard</h1>
+                <p>Welcome back! Here is your account overview.</p>
+            </div>
+
+            <a href="/logout" class="dashboard-logout">Logout</a>
+        </div>
+
+        <div class="dashboard-welcome">
+            <h2>Welcome, {{ user.name }}!</h2>
+            <p>Manage your student account from one place.</p>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+                <span class="card-label">FULL NAME</span>
+                <h3>{{ user.name }}</h3>
+                <p>Your registered name</p>
+            </div>
+
+            <div class="dashboard-card">
+                <span class="card-label">EMAIL ADDRESS</span>
+                <h3>{{ user.email }}</h3>
+                <p>Your registered email</p>
+            </div>
+
+            <div class="dashboard-card">
+                <span class="card-label">ACCOUNT ROLE</span>
+                <h3>{{ user.role | title }}</h3>
+                <p>Your account access level</p>
+            </div>
+
+        </div>
+
+        {% if user.role == "admin" %}
+        <div class="admin-notice">
+            <div>
+                <h3>Administrator Access</h3>
+                <p>You have permission to access the administration page.</p>
+            </div>
+
+            <a href="/admin" class="admin-link">Open Admin Page</a>
+        </div>
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

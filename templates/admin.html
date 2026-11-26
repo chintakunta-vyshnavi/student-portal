@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Admin | StudentPortal{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <div class="container">
+
+        <div class="dashboard-heading">
+            <div>
+                <span class="section-label">ADMINISTRATION</span>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome to the StudentPortal administration area.</p>
+            </div>
+
+            <a href="/logout" class="dashboard-logout">Logout</a>
+        </div>
+
+        <div class="admin-welcome">
+            <h2>Administrator Access</h2>
+            <p>
+                You are logged in with administrator privileges.
+                You can access this page because your account role is admin.
+            </p>
+        </div>
+
+        <div class="admin-details">
+            <h3>Account Information</h3>
+
+            <div class="admin-info-row">
+                <span>Name</span>
+                <strong>{{ user.name }}</strong>
+            </div>
+
+            <div class="admin-info-row">
+                <span>Email</span>
+                <strong>{{ user.email }}</strong>
+            </div>
+
+            <div class="admin-info-row">
+                <span>Role</span>
+                <strong>{{ user.role | title }}</strong>
+            </div>
+        </div>
+
+        <a href="/dashboard" class="back-link">Back to Dashboard</a>
+
+    </div>
+
+</section>
+
+{% endblock %}

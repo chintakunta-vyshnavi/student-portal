@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Home | StudentPortal{% endblock %}
+
+{% block content %}
+
+<section class="hero-section">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+            <span class="hero-label">WELCOME TO STUDENTPORTAL</span>
+
+            <h1>
+                Your Education.<br>
+                Your Progress.<br>
+                Your Future.
+            </h1>
+
+            <p>
+                A simple and secure platform to manage your student
+                profile, access your dashboard, and stay connected
+                with your academic journey.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/register" class="btn-primary">Create Account</a>
+                <a href="/login" class="btn-secondary">Login to Account</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h3>Your Academic Space</h3>
+
+            <div class="feature-item">
+                <span class="feature-number">01</span>
+                <div>
+                    <h4>Student Registration</h4>
+                    <p>Create your personal student account.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-number">02</span>
+                <div>
+                    <h4>Secure Login</h4>
+                    <p>Access your account securely.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-number">03</span>
+                <div>
+                    <h4>Personal Dashboard</h4>
+                    <p>View and manage your student profile.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="container info-content">
+        <div>
+            <span class="section-label">ABOUT THE PLATFORM</span>
+            <h2>Everything starts with one account.</h2>
+        </div>
+
+        <p>
+            StudentPortal brings essential student account features
+            together in one organized place. Register, log in, and
+            access your personal dashboard with ease.
+        </p>
+    </div>
+</section>
+
+{% endblock %}
